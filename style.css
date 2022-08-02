@@ -1,0 +1,365 @@
+/* VAR CSS */
+
+:root{
+    --fm: 'Raleway', sans-serif;
+    --fm_roboto: 'Roboto', sans-serif;
+    --fm-thin: 100;
+    --fm-light: 300;
+    --fm-regular: 400;
+    --fm-bold: 700;
+    --fm-black: 900;
+    --green_75: rgb(105,207,23, 0.75);
+    /* active un */
+    --green_90: rgb(105,207,23, 0.90);
+    /* gamburger un */
+    --green: #69cf17;
+    --green_1: #4e9f0d;
+    --green_2: #62be19;
+    --white: #fff;
+    --white_g: #dedede;
+    --grey: #7a7a7a;
+    --dark: #060002;
+    --black: rgba(0,0,0,0.1);
+
+    --col-1: calc(100% /12 * 1);
+    --col-2: calc(100% /12 * 2);
+    --col-3: calc(100% /12 * 3);
+    --col-4: calc(100% /12 * 4);
+    --col-5: calc(100% /12 * 5);
+    --col-6: calc(100% /12 * 6);
+    --col-7: calc(100% /12 * 7);
+    --col-8: calc(100% /12 * 8);
+    --col-9: calc(100% /12 * 9);
+    --col-10: calc(100% /12 * 10);
+    --col-11: calc(100% /12 * 11);
+    --col-12: calc(100% /12 * 12);
+}
+/* END CSS VAR */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1140px;
+    margin: auto;
+    padding: 0 15px;
+    width: 100%;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+/* justify */
+
+.justify-content-center{
+    justify-content: center;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.justify-content-start{
+    justify-content: flex-start;
+}
+.align-items-start{
+    align-items: flex-start;
+}
+
+/* align-items */
+.align-items-center{
+    align-items: center;
+}
+
+/* flex-column */
+.flex-direction-column{
+    flex-direction: column;
+}
+
+.col-12{
+    width: var(--col-12);
+    padding: 0 15px;
+}
+.col-4{
+    width: var(--col-4);
+    padding: 0 15px;
+}
+
+/* ------ Header_Starting ------ */
+    body{
+        font-family: 'Raleway';
+        background: var(--dark);
+    }
+    header{
+        width: 100%;
+        min-height: 770px;
+        background: url(./images/background_01.jpg) no-repeat center center / cover;
+    }
+    .logo{
+        font-weight: var(--fm-bold);
+        color: var(--white);
+        background: var(--green_1);
+        border: 3px solid var(--green_2);
+        border-radius: 5px;
+        padding: 11px 22px;
+        text-transform: uppercase;
+        font-size: 24px;
+        box-shadow: inset 0 0 20px var(--black);
+        line-height: 17px;
+    }
+    header nav ul li a{
+        color: var(--green);
+        font-weight: var(--fm-light);
+        font-size: 20px;
+        padding: 37px 27px 29px 27px;
+        display: flex;
+    }
+    header nav ul li .active{
+        background: var(--green_75);
+        padding: 37px 11px 29px 11px;
+        color: var(--white);
+    }
+    header nav ul li .active span{
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: var(--white);
+        color: var(--green);
+        display: block;
+        text-align: center;
+        margin-left: 7px;
+    }
+    header h1{
+        color: var(--green);
+        font-size: 72px;
+        font-weight: var(--fm-black);
+        margin-top: 150px;
+        text-transform: uppercase;
+    }
+    header p:first-of-type{
+        font-size: 36px;
+        font-weight: var(--fm-regular);
+        color: var(--green);
+        margin-bottom: 30px;
+    }
+    header p:nth-of-type(2){
+        font-size: 18px;
+        font-weight: var(--fm-regular);
+        color: var(--white_g);
+        margin-bottom: 75px;
+        line-height: 25px;
+    }
+    header .header_price{
+        padding: 28px 90px;
+        background: var(--green_75);
+        color: var(--white);
+        font-size: 60px;
+        font-weight: var(--fm-thin);
+        display: flex;
+        justify-content: flex-start;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    /* Main */
+
+    main ul{
+        margin: 50px 0 69px 0;  
+    }
+    main ul li{
+        margin-right: 50px;
+    }
+    main ul li a{
+        font-size: 20px;
+        font-weight: var(--fm-bold) ;
+        color: var(--grey);
+        transition: 500ms;
+    }
+    main ul li .active,
+    main ul li a:hover
+    {
+        color: var(--green);
+    }
+    main section .section_img{
+        width: 100%;
+        height: 350px;
+        position: relative ;
+    }
+    main section .section_img img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    main section .section_img .price{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+    }
+    main section .section_img .price span{
+        background: var(--green_75);
+        padding: 20px 57px;
+        display: block;
+        color: var(--white);
+        font-size: 24px;
+        font-weight: var(--fm-regular);
+    }
+    main section .section_img button{
+        width: 100%;
+        height: 100%;
+        background: var(--green_90);
+        border: none;
+        color: var(--white);
+        font-size: 24px;
+        font-weight: var(--fm-regular);
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: 1000ms;
+        cursor: pointer;
+    }
+    main section .section_img:hover button{
+        opacity: 1;
+    }
+    main section .section_img:hover .price{
+        opacity: 0;
+        transition: 1000ms;
+    }
+    main section h2{
+        font-size: 24px;
+        font-weight: var(--fm-regular);
+        color: var(--green);
+        text-transform: uppercase;
+        margin: 37px 0 15px;
+    }
+    main section p{
+        font-size: 16px;
+        font-weight: var(--fm-regular);
+        color: var(--white_g);
+        margin-bottom: 50px;
+        line-height: 25px;
+    }
+
+    /* Section */
+
+    .section{
+        width: 100%;
+        height: 560px;
+        background:  url(./images/background2_02.jpg) no-repeat center center / cover;
+
+    }
+    .section h2{
+        font-size: 36px;
+        font-weight: var(--fm-bold);
+        color: var(--green);
+        margin: 46px 0 50px ;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .section h2:after{
+        content: "";
+        display: block;
+        width: 50%;
+        height: 2px;
+        background: var(--green) ;
+        margin-top: 20px;
+    }
+    .section p{
+        color: var(--white);
+        font-size: 18px;
+        font-weight: var(--fm-regular);
+        line-height: 24px;
+    }
+    .section p:last-of-type{
+        margin: 30px 0 100px;
+    }
+
+    .map{
+        font-size:36px ;
+        font-weight: var(--fm-regular) ;
+        color: var(--green);
+        padding: 50px 0;
+        background: var(--white);
+        text-align: center;
+        text-transform: uppercase;
+    }
+   
+    /* Footer */
+    footer .footer_info{
+        margin: 40px 0 50px;
+    }
+    footer .footer_info .phone{
+        color: #4e9f0d;
+        font-weight: var(--fm-bold) ;
+        font-size:24px ;
+    }
+    footer .footer_nav ul li{
+        margin: 0 28px;
+    }
+    footer .footer_nav ul li a{
+        color:  var(--white);
+        font-size: 18px;
+        font-weight: var(--fm-regular);
+    }
+    footer p{
+        color: var(--white);
+        font-size: 16px;
+        font-weight: var(--fm-thin);
+        margin: 40px 0 50px;
+        text-align: center;
+    }
+
+    /* End footer */
+
+    /* Media query */
+
+    /* for mobile phones */
+
+    @media(min-width: 576px) and (max-width: 768px){
+        header .logo{
+            margin-top: 20px;
+        }
+        .d-sm-none{
+            display: none;
+        }
+        .row{
+            margin: 0;
+        }
+        .my-sm-12{
+            width: var(--col-12);
+        }
+        .section p{
+            font-size: 12px;
+        }
+    }
+
+    @media(min-width: 768px) and (max-width: 992px){
+        .row{
+            margin: 0;
+        }
+        .my-md-5{
+            margin: 20px 0;
+        }
+        .col-md-6{
+            width: var(--col-6);
+        }
+    }
+
+    @media(min-width: 992px) and (max-width: 1200px){
+        .row{
+            margin: 0;
+        }
+        .my-lg-5{
+            margin: 20px 0;
+        }
+    }
+
+    /* End Media */
